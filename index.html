@@ -51,12 +51,6 @@
     </div>
     <script>
     
-    var template = $('#forrst-profile-template').html();
-    var compile = Handlebars.compile(template);
-    var result = compile(forrstProfile);
-
-    $('#forrst').html(result);
-
     $.getJSON("1.json", function(data) {
     $('#forrst-profile-template').html(tmpl({objects:data}));
  });
